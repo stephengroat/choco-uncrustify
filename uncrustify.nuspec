@@ -42,7 +42,7 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
     <!--<docsUrl>At what url are the software docs located?</docsUrl>-->
     <!--<mailingListUrl></mailingListUrl>-->
     <!--<bugTrackerUrl></bugTrackerUrl>-->
-    <tags>uncrustify beautify beautifier code-generator c# c c++ objectivec d java pawn VALA</tags>
+    <tags>uncrustify beautify beautifier c# c c++ objectivec d java pawn VALA</tags>
     <summary>Source Code Beautifier for C, C++, C#, ObjectiveC, D, Java, Pawn and, VALA</summary>
     <description>Banish crusty code with the Uncrustify C/C++/C#/D/Java/Pawn source code beautifier. It indents, adds newlines, aligns, etc, and is highly configurable.</description>
     <releaseNotes>
