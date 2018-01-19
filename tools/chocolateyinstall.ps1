@@ -3,8 +3,8 @@ $ErrorActionPreference = 'Stop';
 
 $packageName= 'uncrustify'
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url        = 'https://sourceforge.net/projects/uncrustify/files/uncrustify/uncrustify-0.64/uncrustify-0.64-win32.zip/download'
-$url64      = 'https://sourceforge.net/projects/uncrustify/files/uncrustify/uncrustify-0.64/uncrustify-0.64-win64.zip/download'
+$url        = 'https://sourceforge.net/projects/uncrustify/files/uncrustify/uncrustify-0.66.1/uncrustify-0.66.1-win32.zip/download'
+$url64      = 'https://sourceforge.net/projects/uncrustify/files/uncrustify/uncrustify-0.66.1/uncrustify-0.66.1-win64.zip/download'
 
 $packageArgs = @{
   packageName   = $packageName
@@ -15,9 +15,9 @@ $packageArgs = @{
 
   softwareName  = 'uncrustify*'
 
-  checksum      = '3a76aa568eb3c5fefeb9e726133c8c2c48d4e0f7'
+  checksum      = 'ced262b6023555aa9716d7104d23bf28104a5304'
   checksumType  = 'sha1'
-  checksum64    = '1dcddc67c87d50e58d0147a60b8b8b430ad2f360'
+  checksum64    = '6627a5b80d3573fd2fd8e6c84879ec39876a5773'
   checksumType64= 'sha1'
 
   silentArgs    = "/qn /norestart /l*v `"$($env:TEMP)\$($packageName).$($env:chocolateyPackageVersion).MsiInstall.log`""
