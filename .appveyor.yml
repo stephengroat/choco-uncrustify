@@ -1,0 +1,6 @@
+init:
+  - ps: iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
+  - cinst packages.config -y
+  - refreshenv
+build:
+  - choco install packageName -dv -s .
