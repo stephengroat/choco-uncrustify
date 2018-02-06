@@ -1,6 +1,6 @@
 init:
   - ps: iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
-  - cinst package.config -y
+  - cinst packages.config -y
 build_script:
   - choco pack
 test_script:
