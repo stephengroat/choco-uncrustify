@@ -1,0 +1,3 @@
+[submodule "chocolatey-test-environment"]
+	path = chocolatey-test-environment
+	url = https://github.com/chocolatey/chocolatey-test-environment
