@@ -1,5 +1,4 @@
-﻿
-$ErrorActionPreference = 'Stop';
+﻿$ErrorActionPreference = 'Stop';
 
 $packageName= 'uncrustify'
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
