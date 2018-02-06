@@ -2,7 +2,8 @@ init:
   - ps: iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
 build_script:
   - git submodule update --init --recursive
-  - cinst packages.config -y && refreshenv
+  - cinst packages.config -y & exit 0
+  - refreshenv
   - pushd chocolatey-test-environment && vagrant up && popd
   - choco pack
 test_script:
