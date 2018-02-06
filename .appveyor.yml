@@ -3,6 +3,7 @@ init:
 build_script:
   - git submodule update --init --recursive
   - pushd chocolatey-test-environment && cinst packages.config -y && popd
+  - vagrant plugin install sahara
   - choco pack
 test_script:
   - choco install uncrustify -dv -s .
