@@ -5,18 +5,12 @@ $softwareName = 'uncrustify*' #part or all of the Display Name as you see it in 
 $installerType = 'EXE'
 
 $silentArgs = '/qn /norestart'
-# https://msdn.microsoft.com/en-us/library/aa376931(v=vs.85).aspx
 $validExitCodes = @(0, 3010, 1605, 1614, 1641)
 if ($installerType -ne 'MSI') {
   $validExitCodes = @(0)
 }
 
 $uninstalled = $false
-# Get-UninstallRegistryKey is new to 0.9.10, if supporting 0.9.9.x and below,
-# take a dependency on "chocolatey-uninstall.extension" in your nuspec file.
-# This is only a fuzzy search if $softwareName includes '*'. Otherwise it is
-# exact. In the case of versions in key names, we recommend removing the version
-# and using '*'.
 [array]$key = Get-UninstallRegistryKey -SoftwareName $softwareName
 
 if ($key.Count -eq 1) {
@@ -49,11 +43,3 @@ if ($key.Count -eq 1) {
   Write-Warning "Please alert package maintainer the following keys were matched:"
   $key | % {Write-Warning "- $_.DisplayName"}
 }
-
-
-## OTHER HELPERS
-## https://chocolatey.org/docs/helpers-reference
-#Uninstall-ChocolateyZipPackage $packageName # Only necessary if you did not unpack to package directory - see https://chocolatey.org/docs/helpers-uninstall-chocolatey-zip-package
-#Uninstall-ChocolateyEnvironmentVariable # 0.9.10+ - https://chocolatey.org/docs/helpers-uninstall-chocolatey-environment-variable
-#Uninstall-BinFile # Only needed if you used Install-BinFile - see https://chocolatey.org/docs/helpers-uninstall-bin-file
-## Remove any shortcuts you added
